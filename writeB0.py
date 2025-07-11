@@ -11,7 +11,8 @@ except:
     raise Exception("*** Must first set CLAW enviornment variable")
 
 # Scratch directory for storing topo and dtopo files:
-dir = os.path.join(CLAW, 'geoclaw/examples/urakawa1982')
+#dir = os.path.join(CLAW, 'geoclaw/examples/urakawa1982')
+dir = '/Users/anitamiddleton/Documents/python/urakawa1982'
 
 locs = ['Hokkaido']
 
@@ -22,7 +23,7 @@ for loc in locs:
     print('Using output from outdir = ', outdir)
     # Read fgmax data:
     fg = fgmax_tools.FGmaxGrid()
-    fgmax_input_file_name = outdir + '/fgmax_grids.data'
+    fgmax_input_file_name = os.path.join(dir, 'fgmax_grids.data')
     print('fgmax input file: \n  %s' % fgmax_input_file_name)
     fg.read_fgmax_grids_data(fgno=1, data_file=fgmax_input_file_name)
     fg.read_output(outdir=outdir)

@@ -18,7 +18,8 @@ except:
     raise Exception("*** Must first set CLAW enviornment variable")
 
 # Scratch directory for storing topo and dtopo files:
-dir = os.path.join(CLAW, 'geoclaw/examples/urakawa1982/scratch')
+#dir = os.path.join(CLAW, 'geoclaw/examples/urakawa1982/scratch')
+dir = '/Users/anitamiddleton/Documents/python/urakawa1982/scratch/'
 
 #------------------------------
 def setrun(claw_pkg='geoclaw'):
