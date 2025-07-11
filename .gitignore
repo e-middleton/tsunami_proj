@@ -20,3 +20,4 @@ qinit.data
 multilayer.data
 adjoint.data
 .data
+.output
