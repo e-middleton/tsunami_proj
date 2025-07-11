@@ -20,14 +20,17 @@
 import os
 os.environ['CLAW'] = 'Users/anitamiddleton/Documents/python/clawpack'
 os.environ['FC'] = 'gfortran'
-dir = os.path.join(os.environ['CLAW'], 'geoclaw/examples/urakawa1982/scratch')
+import clawpack 
+
+#dir = os.path.join(os.environ['CLAW'], 'geoclaw/examples/urakawa1982/scratch')
+dir = '/Users/anitamiddleton/Documents/python/urakawa1982/scratch/'
 
 # create ruled region
 from clawpack.amrclaw import region_tools
 from clawpack.geoclaw import topotools, marching_front
 import numpy as np
 
-topo_path = '/Users/anitamiddleton/Documents/python/clawpack/geoclaw/examples/urakawa1982/scratch/cropped_hokkaido.tt3'
+topo_path = os.path.join(dir, 'cropped_hokkaido.tt3')
 topo = topotools.Topography(topo_path, topo_type=3)
 
 # qualities used to select points for the fgmax grid
@@ -56,7 +59,7 @@ pts_chosen_nearshore = np.logical_and(pts_chosen, pts_chosen_shallow)
 Znearshore = np.ma.masked_array(topo.Z, np.logical_not(pts_chosen_nearshore))
 
 # create file structured like the input topo file
-fname_fgmax_mask = 'fgmax_pts_topostyle.data'
+fname_fgmax_mask = 'scratch/fgmax_pts_topostyle.data'
 topo_fgmax_mask = topotools.Topography()
 topo_fgmax_mask._x = topo.x
 topo_fgmax_mask._y = topo.y
@@ -73,7 +76,7 @@ rr = region_tools.ruledrectangle_covering_selected_points(topo.X, topo.Y, pts_ch
                                                           ixy='y', method=0,
                                                           padding=0, verbose=True)
 xv,yv = rr.vertices()
-rr.write('RuledRectangle_fgmax.data')
+rr.write('scratch/RuledRectangle_fgmax.data')
 
 # check the structure of the RuledRectangle
 if 0:

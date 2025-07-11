@@ -25,7 +25,7 @@ except:
 
 # Scratch directory for storing topo and dtopo files:
 #dir = os.path.join(CLAW, 'geoclaw/examples/urakawa1982/scratch')
-dir = '/Users/anitamiddleton/Documents/urakawa1982/scratch'
+dir = '/Users/anitamiddleton/Documents/python/urakawa1982/scratch'
 
 def get_topo(makeplots=False):
     """
