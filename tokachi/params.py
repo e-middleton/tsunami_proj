@@ -25,12 +25,12 @@ which_test = input("Which test in the scratch directory from this project would 
 test_dir = os.path.join(scratch_dir, 'tokachi', which_test)
 
 
-makeB0 = False
+makeB0 = True
 
 amr_max = 5
 
 num_output_times = 30
-end_time = 2.5*3600.
+end_time = 1*3600.
 
 # computational domain
 lower = [138.0, 38]
@@ -67,7 +67,7 @@ flagregions.append(flagregion)
 
 flagregion2 = FlagRegion(num_dim=2)
 flagregion2.name = 'Region_FGMax_points'
-flagregion2.minlevel = amr_max-1
+flagregion2.minlevel = amr_max
 flagregion2.maxlevel = amr_max
 flagregion2.t1 = 0.
 flagregion2.t2 = 1e9
