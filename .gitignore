@@ -1,0 +1,5 @@
+*.kml
+*.tt3
+_output
+_plots
+*.data
