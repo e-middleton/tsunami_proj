@@ -116,15 +116,6 @@ flagregion6.spatial_region_type=1
 flagregion6.spatial_region=[144, 144.5, 42.5, 43.3]
 flagregions.append(flagregion6)
 
-flagregion7 = FlagRegion(num_dim=2)
-flagregion7.name = "Region_fgmax_rectangle"
-flagregion7.minlevel = 4
-flagregion7.maxlevel = 5
-flagregion7.t1 = 0.
-flagregion7.t2 = inf
-flagregion7.spatial_region_type=1
-flagregion7.spatial_region=[143.238988, 145.292478, 42.082453, 43.194478]
-flagregions.append(flagregion7)
 
 ## FGMax grids ##
 
@@ -147,7 +138,7 @@ fg.xy_fname = os.path.join(scratch_dir, 'tokachi/fgmax_pts_topostyle.txt')  # fi
 fg.tstart_max = 5. # after rupture (hopefully)
 fg.tend_max = end_time # same as final time for whole run
 fg.dt_check = 0 # monitor every time step
-fg.min_level_check = amr_max-1
+fg.min_level_check = amr_max
 fgmax_grids=[fg]
 
 
