@@ -90,7 +90,7 @@ def make_fgmax():
     from clawpack.geoclaw import topotools, marching_front, fgmax_tools
 
     fgmax_pts_fname = scratch_dir + '/ishikari/fgmax_pts_topostyle.txt'
-    ruledRectangle_fname = scratch_dir + 'ishikari/RuledRectangle_fgmax.txt'
+    ruledRectangle_fname = scratch_dir + '/ishikari/RuledRectangle_fgmax.txt'
 
     if os.path.exists(fgmax_pts_fname):
         if os.path.exists(ruledRectangle_fname):
@@ -136,7 +136,7 @@ def make_fgmax():
         rr.write(os.path.join(scratch_dir, 'ishikari/RuledRectangle_fgmax.txt'))
 
 def check_B0():
-    fgmax_ptsB0_fname = scratch_dir + 'ishikari/ishikari_B0.txt' # or other name of the fgmax grid's B0 file
+    fgmax_ptsB0_fname = scratch_dir + '/ishikari/ishikari_B0.txt' # or other name of the fgmax grid's B0 file
     if os.path.exists(fgmax_ptsB0_fname):
         print("B0 file for fgmax points exists, no further steps needed.")
     else:
