@@ -5,3 +5,8 @@ _plots
 *.data
 xgeoclaw
 *.png
+.DS_store
+.DS_Store
+tokachi/__pycache__/params.cpython-39.pyc
+tokachi/pyclaw.log
+tokachi/__pycache__/setplot.cpython-39.pyc
