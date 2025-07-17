@@ -18,8 +18,6 @@ try:
 except:
     raise Exception("*** Must first set CLAW enviornment variable")
 
-# Scratch directory for storing topo and dtopo files:
-dir = params.dir
 amr_max = params.amr_max
 endtime = params.end_time
 
