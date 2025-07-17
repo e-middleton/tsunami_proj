@@ -134,7 +134,7 @@ fg.xy_fname = os.path.join(scratch_dir, 'ishikari/fgmax_pts_topostyle.txt')  # f
 fg.tstart_max = 5. # after rupture (hopefully)
 fg.tend_max = end_time # same as final time for whole run
 fg.dt_check = 0 # monitor every time step
-fg.min_level_check = amr_max-1
+fg.min_level_check = amr_max
 fgmax_grids=[fg]
 
 # ---------------
