@@ -65,7 +65,7 @@ flagregions.append(flagregion)
 
 flagregion2 = FlagRegion(num_dim=2)
 flagregion2.name = 'Region_FGMax_points'
-flagregion2.minlevel = amr_max-1
+flagregion2.minlevel = amr_max
 flagregion2.maxlevel = amr_max
 flagregion2.t1 = 0.
 flagregion2.t2 = 1e9
