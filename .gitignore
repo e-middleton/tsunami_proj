@@ -11,3 +11,7 @@ tokachi/pyclaw.log
 ishikari/.plots
 ishikari/pyclaw.log
 __pycache__
+.plots
+.output
+compile_output.txt
+pyclaw.log
