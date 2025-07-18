@@ -140,11 +140,21 @@ def check_B0():
     if os.path.exists(fgmax_ptsB0_fname):
         print("B0 file for fgmax points exists, no further steps needed.")
     else:
-        print("Please run geoclaw using makeB0 set to True in params.py to generate B0 file for fgmax grid.")
+        print()
+        print("The B0 file for the fgmax grid does not exist.")
+        print("Please open params.py in the project directory, and set makeB0 to True")
+        print("Then, do a geoclaw run as normal.")
+        print("Once the geoclaw run has finished, run")
+        print("python writeB0.py")
+        print("This will create the appropriate file for using to parse the fgmax grid outputs later.")
+        print("Do not forget to set makeB0 to False after this has been completed.")
+        print("Failure to set it to false will mean that no rupture information is included in the geoclaw run.")
+        print()
 
 # creates fgmax grid and RuledRectangle
 
 if __name__=='__main__':
+    print()
     make_topo()
     make_dtopo()
     make_fgmax()

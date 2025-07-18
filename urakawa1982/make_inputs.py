@@ -10,8 +10,7 @@ test_dir = os.path.join(scratch_dir, 'urakawa1982', which_test)
 def make_topo():
     topo_fname = os.path.join(scratch_dir, 'curr_topo.tt3')
     if os.path.exists(topo_fname):
-        print("Topography file already exists, not regenerating.")
-        print()
+        print("*** Not regenerating Topography file (already exists)")
     else:
         from clawpack.geoclaw import topotools
         print("Making topography file...")
@@ -90,7 +89,7 @@ def make_fgmax():
     from clawpack.geoclaw import topotools, marching_front, fgmax_tools
 
     fgmax_pts_fname = scratch_dir + '/urakawa1982/fgmax_pts_topostyle.txt'
-    ruledRectangle_fname = scratch_dir + 'urakawa1982/RuledRectangle_fgmax.txt'
+    ruledRectangle_fname = scratch_dir + '/urakawa1982/RuledRectangle_fgmax.txt'
 
     if os.path.exists(fgmax_pts_fname):
         if os.path.exists(ruledRectangle_fname):
@@ -136,15 +135,26 @@ def make_fgmax():
         rr.write(os.path.join(scratch_dir, 'urakawa1982/RuledRectangle_fgmax.txt'))
 
 def check_B0():
-    fgmax_ptsB0_fname = scratch_dir + 'urakawa1982/urakawa1982_B0.txt' # or other name of the fgmax grid's B0 file
+    fgmax_ptsB0_fname = scratch_dir + '/urakawa1982/urakawa1982_B0.txt' # or other name of the fgmax grid's B0 file
     if os.path.exists(fgmax_ptsB0_fname):
         print("B0 file for fgmax points exists, no further steps needed.")
     else:
-        print("Please run geoclaw using makeB0 set to True in params.py to generate B0 file for fgmax grid.")
+        print()
+        print("The B0 file for the fgmax grid does not exist.")
+        print("Please open params.py in the project directory, and set makeB0 to True")
+        print("Then, do a geoclaw run as normal.")
+        print("Once the geoclaw run has finished, run")
+        print("python writeB0.py")
+        print("This will create the appropriate file for using to parse the fgmax grid outputs later.")
+        print("Do not forget to set makeB0 to False after this has been completed.")
+        print("Failure to set it to false will mean that no rupture information is included in the geoclaw run.")
+        print()
+
 
 # creates fgmax grid and RuledRectangle
 
 if __name__=='__main__':
+    print() # line to clear space to clarify output
     make_topo()
     make_dtopo()
     make_fgmax()
