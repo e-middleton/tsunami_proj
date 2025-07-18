@@ -65,7 +65,7 @@ flagregions.append(flagregion)
 
 flagregion2 = FlagRegion(num_dim=2)
 flagregion2.name = 'Region_FGMax_points'
-flagregion2.minlevel = amr_max-1
+flagregion2.minlevel = amr_max
 flagregion2.maxlevel = amr_max
 flagregion2.t1 = 0.
 flagregion2.t2 = 1e9
@@ -134,7 +134,7 @@ fg.xy_fname = os.path.join(scratch_dir, 'urakawa1982/fgmax_pts_topostyle.txt')  
 fg.tstart_max = 5. # after rupture (hopefully)
 fg.tend_max = end_time # same as final time for whole run
 fg.dt_check = 0 # monitor every time step
-fg.min_level_check = amr_max-1
+fg.min_level_check = amr_max
 fgmax_grids=[fg]
 
 # ---------------
