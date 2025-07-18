@@ -143,9 +143,9 @@ fgmax_grids=[fg]
 gauges = []
 # # for gauges append lines of the form  [gaugeno, x, y, t1, t2]
 gauges.append([129, 142.765722, 42.166085, 0., 1.e10]) # urakawa tide gauge
-#rundata.gaugedata.gauges.append([129, 142.765722, 42.116085, 0., 1.e10]) # urakawa for coarse AMR
+#gauges.append([129, 142.765722, 42.116085, 0., 1.e10]) # urakawa for coarse AMR
 gauges.append([112, 143.135422, 42.010444, 0., 1e10]) # erimo port location
-#rundata.gaugedata.gauges.append([112, 143.135422, 41.910444, 0., 1e10]) # erimo port location for coarse AMR
+#gauges.append([112, 143.135422, 41.910444, 0., 1e10]) # erimo port location for coarse AMR
 gauges.append([113, 141.613420, 42.614828, 0., 1e10]) # tomakomai (outside of breakwater thing, so not quite accurate)
 gauges.append([114, 142.416, 42.254, 0., 1e10]) # fake gauge near urakawa
 
