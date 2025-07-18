@@ -25,12 +25,12 @@ which_test = input("Which test in the scratch directory from this project would 
 test_dir = os.path.join(scratch_dir, 'tokachi2003', which_test)
 
 
-makeB0 = True
+makeB0 = False
 
 amr_max = 5
 
-num_output_times = 60
-end_time = 5*3600.
+num_output_times = 48
+end_time = 4*3600.
 
 # computational domain
 lower = [138.0, 38]
