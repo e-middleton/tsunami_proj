@@ -1,6 +1,7 @@
 
 This project requires the software package clawpack from 
 https://www.clawpack.org/developers.html#installation-instructions-for-developers 
+follow the download instructions in the link and use the virtual environment created to run the projects in this repo.
 
 There are three separate projects
 
