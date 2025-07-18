@@ -62,11 +62,10 @@ def make_dtopo():
             fault0.subfaults.append(subfault0)
         
         # specify extent of seafloor deformation (?)
-        # wasteful of space, but is suitable for any hidaka ruptures
-        xlower = 140
-        xupper = 145
-        ylower = 41
-        yupper = 43
+        xlower = 142
+        xupper = 143.3
+        ylower = 41.25
+        yupper = 42.7
 
         # dtopo parameters:
         points_per_degree = 240  # 15 second resolution
