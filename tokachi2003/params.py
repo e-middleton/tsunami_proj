@@ -30,7 +30,7 @@ makeB0 = False
 amr_max = 5
 
 num_output_times = 48
-end_time = 4*3600.
+end_time = 2*3600.
 
 # computational domain
 lower = [138.0, 38]
@@ -57,7 +57,7 @@ x1,x2,y1,y2 = lower[0], upper[0], lower[1], upper[1]
 
 flagregion = FlagRegion(num_dim=2)  # so far only 2D supported
 flagregion.name = 'Region_domain'
-flagregion.minlevel = 1
+flagregion.minlevel = 2
 flagregion.maxlevel = amr_max-1
 flagregion.t1 = 0.
 flagregion.t2 = 1e9
@@ -110,7 +110,7 @@ fgmax_grids=[fg]
 gauges = []
 # # for gauges append lines of the form  [gaugeno, x, y, t1, t2]
 gauges.append([129, 142.765722, 42.166085, 0., 1.e10]) # urakawa
-gauges.append([111, 143.324564, 42.293637, 0., 1.e10]) # tokachi ko
+gauges.append([111, 143.351247, 42.248277, 0., 1.e10]) # tokachi ko
 gauges.append([112, 144.37100220, 42.87560120, 0., 1.e10]) # Kushiro
 
 

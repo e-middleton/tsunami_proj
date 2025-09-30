@@ -68,11 +68,11 @@ def make_dtopo():
 
             print("Using Okada model to create dtopo file")
             
-            x,y = fault0.create_dtopo_xy(dx = 4/60.) #what is dx?
+            x,y = fault0.create_dtopo_xy(dx = 4/60.) 
             print('Will create dtopo on arrays of shape %i by %i' % (len(x),len(y)))
             tfinal = max([subfault1.rupture_time + subfault1.rise_time for subfault1 in fault0.subfaults])
             times0 = np.linspace(0.,tfinal,100)
-            dtopo0 = fault0.create_dtopography(x,y,times=times0,verbose=True);
+            dtopo0 = fault0.create_dtopography(x,y,times=times0,verbose=False);
             dtopo0.write(dtopo_fname, dtopo_type=3)
 
             print('Created %s, with dynamic rupture of a Mw %.2f event' % (dtopo_fname, fault0.Mw()))
@@ -99,7 +99,7 @@ def make_fgmax():
     else:
         topo_path = os.path.join(scratch_dir, 'curr_topo.tt3')
         topo = topotools.Topography(topo_path, topo_type=3)
-        topo = topo.crop(filter_region=[143, 146, 41.75, 43.25])
+        topo = topo.crop(filter_region=[141.5, 145.5, 41.5, 43.2])
 
         pts_chosen = marching_front.select_by_flooding(topo.Z, Z1=0, Z2=1e10, max_iters=None)
 

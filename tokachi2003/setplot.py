@@ -54,6 +54,11 @@ def setplot(plotdata=None):
         from clawpack.visclaw import gaugetools
         gaugetools.plot_gauge_locations(current_data.plotdata, \
         gaugenos=[111], format_string='ko', add_labels=True)
+
+    def addgauges3(current_data):
+        from clawpack.visclaw import gaugetools
+        gaugetools.plot_gauge_locations(current_data.plotdata, \
+        gaugenos=[112], format_string='ko', add_labels=True)
         
     def fixup(current_data):
         import pylab
@@ -100,7 +105,7 @@ def setplot(plotdata=None):
     plotitem.colorbar_shrink = 0.8
     plotitem.colorbar_extend = 'both'
     plotitem.amr_celledges_show = [0,0,0,0,0]
-    plotitem.patchedges_show = 1
+    plotitem.patchedges_show = 0
 
     # Land
     plotitem = plotaxes.new_plotitem(plot_type='2d_pcolor')
@@ -110,7 +115,7 @@ def setplot(plotdata=None):
     plotitem.pcolor_cmax = 100.0
     plotitem.add_colorbar = False
     plotitem.amr_celledges_show = [0,0,0,0,0]
-    plotitem.patchedges_show = 1
+    plotitem.patchedges_show = 0
     plotaxes.xlimits = [139,148]
     plotaxes.ylimits = [38,46]
 
@@ -166,7 +171,7 @@ def setplot(plotdata=None):
     plotaxes = plotfigure.new_plotaxes('pcolor')
     plotaxes.title = 'Surface'
     plotaxes.scaled = True
-    plotaxes.afteraxes = addgauges1
+    plotaxes.afteraxes = addgauges2
     plotaxes.xlimits = [142,145]
     plotaxes.ylimits = [41.5,43]
 
@@ -197,7 +202,7 @@ def setplot(plotdata=None):
     plotaxes = plotfigure.new_plotaxes('pcolor')
     plotaxes.title = 'Surface'
     plotaxes.scaled = True
-    plotaxes.afteraxes = addgauges2
+    plotaxes.afteraxes = addgauges3
     plotaxes.xlimits = [144,145]
     plotaxes.ylimits = [42.5,43.5]
 

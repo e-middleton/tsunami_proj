@@ -83,28 +83,31 @@ flagregion3.maxlevel=3
 flagregion3.t1 = 0.
 flagregion3.t2 = 3600.
 flagregion3.spatial_region_type = 1 # Rectangle
-flagregion3.spatial_region = [142, 145, 40, 43]
+flagregion3.spatial_region = [142.8, 144.7, 41, 43.2]
 flagregions.append(flagregion3)
 
-flagregion4 = FlagRegion(num_dim=2)
-flagregion4.name = "Region_tokachi_ko"
-flagregion4.minlevel=amr_max-1
-flagregion4.maxlevel=amr_max
-flagregion4.t1 = 0.
-flagregion4.t2 = inf
-flagregion4.spatial_region_type=1
-flagregion4.spatial_region = [143, 143.5, 42, 42.45]
-flagregions.append(flagregion4)
+# covered by fgmax grid, already refines to amr_max
 
-flagregion5 = FlagRegion(num_dim=2)
-flagregion5.name = "Region_erimo_port"
-flagregion5.minlevel=amr_max-1
-flagregion5.maxlevel=amr_max
-flagregion5.t1 = 0.
-flagregion5.t2 = inf
-flagregion5.spatial_region_type=1
-flagregion5.spatial_region=[143, 143.3, 41.9, 42.2]
-flagregions.append(flagregion5)
+# flagregion4 = FlagRegion(num_dim=2)
+# flagregion4.name = "Region_tokachi_ko"
+# flagregion4.minlevel=amr_max-1
+# flagregion4.maxlevel=amr_max
+# flagregion4.t1 = 0.
+# flagregion4.t2 = inf
+# flagregion4.spatial_region_type=1
+# flagregion4.spatial_region = [143, 143.5, 42, 42.45]
+# flagregions.append(flagregion4)
+
+# already covered by fgmax grid, refines to amr_max
+# flagregion5 = FlagRegion(num_dim=2)
+# flagregion5.name = "Region_erimo_port"
+# flagregion5.minlevel=amr_max-1
+# flagregion5.maxlevel=amr_max
+# flagregion5.t1 = 0.
+# flagregion5.t2 = inf
+# flagregion5.spatial_region_type=1
+# flagregion5.spatial_region=[143, 143.3, 41.9, 42.2]
+# flagregions.append(flagregion5)
 
 flagregion6 = FlagRegion(num_dim=2)
 flagregion6.name = "Region_kushiro"
