@@ -1,3 +1,4 @@
+Project for tsunami simulation using modeled earthquakes around Hokkaido, Japan.
 
 This project requires the software package clawpack from 
 https://www.clawpack.org/developers.html#installation-instructions-for-developers 
