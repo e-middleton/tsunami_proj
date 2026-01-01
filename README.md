@@ -22,6 +22,12 @@ The project directories in the scratch folder contain the tests run for each pro
 take care with file names, because all of the tests have identically named fault_model.csv, rupt_param.csv, and dtopo.tt3 files.
 They are kept separate in their test folders, and if removed, can easily become mixed up.
 
+## Input files
+
+B0.txt - The original, undeformed topography file within the fgmax monitoring perimeter
+
+RuledRectangle_fgmax.txt - a rectangular region for grid monitoring of sea level height
+
 fault_model.csv - the mesh model of the fault where an earthquake is being simulated
 
 rupt_param.csv - the simulated rupture along the fault elements
@@ -32,8 +38,11 @@ dtopo.tt3 - the deformed topography file created from the simulated rupture, fau
 In order to run a test, first set the environment variables for 
 
 export PROJ = /directory/of/this/github/repo
+
 export OUTPUT = /project/directory/within/outputs/folder
+
 export CLAW = /clawpack/installation/location
+
 export FC = gfortran
 
 Example test run: 
