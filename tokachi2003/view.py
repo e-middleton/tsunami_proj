@@ -9,7 +9,7 @@ import os
 import numpy as np
 
 # Read in observations for Urakawa
-scratch_dir = '/Users/anitamiddleton/Documents/python/tsunami_proj/scratch/tokachi2003'
+scratch_dir = './scratch/tokachi2003'
 gauge_path = os.path.join(scratch_dir, 'tide_gauge_observations/urakawa.csv') # observed tide gauge data
 
 observed_urakawa = np.loadtxt(gauge_path, delimiter=',', skiprows=1) # x,y time,height
@@ -26,7 +26,7 @@ observed_kushiro = np.loadtxt(gauge_path, delimiter=',', skiprows=1) # x,y time,
 gauge_path = os.path.join(scratch_dir, 'tide_gauge_observations/tokachi.csv') # observed tide gauge data
 observed_tokachi = np.loadtxt(gauge_path, delimiter=',', skiprows=1) # x,y time,height
 
-outdir = '/Users/anitamiddleton/Documents/python/tsunami_proj/outputs/tokachi2003/_output'
+outdir = './outputs/tokachi2003/_output'
 time_shift = 10 # 10 minutes
 plotdata.outdir = outdir 
 g129 = plotdata.getgauge(129)

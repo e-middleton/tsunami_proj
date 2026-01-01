@@ -10,20 +10,19 @@ import os
 # topo_dir = 'scratch/common_topo'
 
 # point this environment variable to wherever clawpack has been cloned / installed on your computer
-os.environ['CLAW'] = '/Users/anitamiddleton/Documents/python/clawpack'
+os.environ['CLAW'] = '$HOME/Documents/python/clawpack'
 
 try:
     CLAW = os.environ['CLAW']
 except:
     raise Exception("*** Must first set CLAW enviornment variable")
 
-root_dir = '/Users/anitamiddleton/Documents/python/tsunami_proj'
+root_dir = './' # current directory of tsunami_proj repo
 scratch_dir = os.path.join(root_dir, 'scratch')
 
 # ADJUST
 which_test = input("Which test in the scratch directory from this project would you like to run? ")
 test_dir = os.path.join(scratch_dir, 'tokachi', which_test)
-
 
 makeB0 = False
 

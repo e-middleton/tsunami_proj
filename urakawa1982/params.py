@@ -10,14 +10,14 @@ import os
 # topo_dir = 'scratch/common_topo'
 
 # point this environment variable to wherever clawpack has been cloned / installed on your computer
-os.environ['CLAW'] = '/Users/anitamiddleton/Documents/python/clawpack'
+os.environ['CLAW'] = '$HOME/Documents/python/clawpack'
 
 try:
     CLAW = os.environ['CLAW']
 except:
     raise Exception("*** Must first set CLAW enviornment variable")
 
-root_dir = '/Users/anitamiddleton/Documents/python/tsunami_proj'
+root_dir = '.' #tsunami_proj dir
 scratch_dir = os.path.join(root_dir, 'scratch')
 
 # ADJUST

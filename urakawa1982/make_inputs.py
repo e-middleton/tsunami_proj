@@ -2,7 +2,7 @@ import os
 import numpy as np
 
 
-scratch_dir = '/Users/anitamiddleton/Documents/python/tsunami_proj/scratch'
+scratch_dir = './scratch'
 
 which_test = input("Which test in the scratch directory from this project would you like to run? ")
 test_dir = os.path.join(scratch_dir, 'urakawa1982', which_test)

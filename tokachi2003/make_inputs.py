@@ -2,7 +2,7 @@ import os
 import numpy as np
 
 
-scratch_dir = '/Users/anitamiddleton/Documents/python/tsunami_proj/scratch'
+scratch_dir = './scratch'
 
 which_test = input("Which test in the scratch directory from this project would you like to run? ")
 test_dir = os.path.join(scratch_dir, 'tokachi2003', which_test)
@@ -23,7 +23,6 @@ def make_topo():
         topo = topotools.Topography(new_topo_path, topo_type=3)
         print("The extent of the data in longitude and latitude: ")
         print(topo.extent)
-
 
 # checks for dtopo, if it does not exist, writes dtopo
 def make_dtopo():

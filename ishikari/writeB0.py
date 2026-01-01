@@ -8,7 +8,7 @@ except:
     raise Exception("*** Must first set CLAW enviornment variable")
 
 # Scratch directory for storing topo and dtopo files:
-dir = '/Users/anitamiddleton/Documents/python/tsunami_proj'
+dir = '.' # current directory / tsunami_proj
 
 outdir = os.path.join(dir, 'outputs/ishikari/_output')
 print('Using output from outdir = ', outdir)
