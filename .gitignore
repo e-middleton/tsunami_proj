@@ -6,7 +6,6 @@ _plots
 xgeoclaw
 *.png
 .DS_store
-.DS_Store
 tokachi/pyclaw.log
 ishikari/.plots
 ishikari/pyclaw.log
