@@ -39,27 +39,27 @@ export FC = gfortran
 Example test run: 
 Activate the virtual environment where clawpack has been installed, e.g.
 
-**conda activate clawpack**
+*conda activate clawpack*
 
 Then move into the project directory that corresponds to the test you want to run,  
 
-**cd tokachi**
+*cd tokachi*
 
 Make sure all inputs are present before running
 
-**python make_inputs.py**
+*python make_inputs.py*
 
 Which should then output 
 
-**Which test in the scratch directory from this project would you like to run?** test1_TWC
+*Which test in the scratch directory from this project would you like to run?* test1_TWC
 
 Follow any directions the output gives, if no instructions are given, run
 
-**make .output** or **make .plots**
+*make .output* or *make .plots*
 
 It will then confirm,
 
-**Which test in the scratch directory from this project would you like to run?** test1_TWC
+*Which test in the scratch directory from this project would you like to run?* test1_TWC
 
 Then it should run the geoclaw simulation, and outputs can be saved to the images folder of outputs, and 
 sorted through using the view_results.ipynb for that particular project.
