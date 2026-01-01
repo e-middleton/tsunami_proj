@@ -24,26 +24,19 @@ They are kept separate in their test folders, and if removed, can easily become 
 
 ## Input files
 
-B0.txt - The original, undeformed topography file within the fgmax monitoring perimeter
-
-RuledRectangle_fgmax.txt - a rectangular region for grid monitoring of sea level height
-
-fault_model.csv - the mesh model of the fault where an earthquake is being simulated
-
-rupt_param.csv - the simulated rupture along the fault elements
-
+B0.txt - The original, undeformed topography file within the fgmax monitoring perimeter <br>
+RuledRectangle_fgmax.txt - a rectangular region for grid monitoring of sea level height <br>
+fault_model.csv - the mesh model of the fault where an earthquake is being simulated <br>
+rupt_param.csv - the simulated rupture along the fault elements <br>
 dtopo.tt3 - the deformed topography file created from the simulated rupture, fault mesh, and original topography files
 
 ## Running tests
-In order to run a test, first set the environment variables for 
+In order to run a test, first set the environment variables for: <br>
 
-export PROJ = /directory/of/this/github/repo
-
-export OUTPUT = /project/directory/within/outputs/folder
-
-export CLAW = /clawpack/installation/location
-
-export FC = gfortran
+export PROJ = /directory/of/this/github/repo <br>
+export OUTPUT = /project/directory/within/outputs/folder <br>
+export CLAW = /clawpack/installation/location <br>
+export FC = gfortran <br>
 
 Example test run: 
 Activate the virtual environment where clawpack has been installed, e.g.
